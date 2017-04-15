@@ -1,0 +1,6 @@
+{"type":"open","id":"Samantha","balance":1000,"timestamp":1492188833410}
+{"type":"open","id":"John","balance":500,"timestamp":1492188833411}
+{"type":"open","id":"Suzzy","balance":0,"timestamp":1492188833411}
+{"type":"transfer","fromId":"Samantha","toId":"John","amount":500,"timestamp":1492188833418}
+{"type":"transfer","fromId":"Samantha","toId":"Suzzy","amount":500,"timestamp":1492188833418}
+{"type":"close","id":"Samantha","balance":0,"timestamp":1492188833420}
