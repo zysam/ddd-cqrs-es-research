@@ -9,7 +9,7 @@
 ## bus 事件总线
 - publish/subscribe
 - sending/receiving
-- broad
+- broadcast
 
 ## event driven 事件驱动
 
@@ -17,7 +17,36 @@
 
 ## CQRS 命令与查询责任分离
 
+##  ENode C# 架构图
+![ENode Architecture](images/2017-04-21-01-41-22.png)
+
+## 重点
+1. 一个 aggregate 里，利用 mq 将 eventStore + publish 两件事合成一个原子操作
+2. 所有的 store 转为幂等操作，即 upsert 
+3. 跨 aggregate, 采用 saga
+4. saga 补偿理解：作为一个额外系统对业务数据不一致，进行类似取消的操作。
+
+## 理解难点
+
+1. Aggregate in-memory 的设计
+2. 分布式 command, 一个事务只修改一个 aggregate
+3. Saga 设计
 
 ## 参考
+
+### 博文
+[nodejs-microservices-event-sourcing-cqrs](http://slides.com/stefankutko/nodejs-microservices-event-sourcing-cqrs)
 [event-sourcing-in-practice](https://ookami86.github.io/event-sourcing-in-practice/)
 [cqrs-explained-node-js-at-scale](https://blog.risingstack.com/cqrs-explained-node-js-at-scale/)
+
+### C#, 汤雪华
+[DDD ES 架构分享](http://www.cnblogs.com/netfocus/p/4150084.html)
+[微服务架构下的事务一致性保证](https://yq.aliyun.com/articles/66109)
+
+### 前端, react & flux
+[almin](https://github.com/almin/almin)
+[Flux与Redux背后的设计思想(二)：CQRS, Event Sourcing, DDD](https://zhuanlan.zhihu.com/p/25383827)
+
+### 后端, NodeJs
+[coffescript 写的CQRS 架构 eventric](https://github.com/efacilitation/eventric)
+[基于 Actor 的CQRS](https://github.com/liangzeng/cqrs)
