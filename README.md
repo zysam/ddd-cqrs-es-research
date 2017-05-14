@@ -48,5 +48,7 @@
 [Flux与Redux背后的设计思想(二)：CQRS, Event Sourcing, DDD](https://zhuanlan.zhihu.com/p/25383827)
 
 ### 后端, NodeJs
+[node-cqrs 全家桶](http://cqrs.js.org/pages/eventedcommand.html)
+[基于 node-cqrs example](https://github.com/jamuhl/nodeCQRS)
 [coffescript 写的CQRS 架构 eventric](https://github.com/efacilitation/eventric)
 [基于 Actor 的CQRS](https://github.com/liangzeng/cqrs)
